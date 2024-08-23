@@ -1,0 +1,22 @@
+.main {
+  width: 100%;
+  padding: 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.first_exercise {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.first_exercise input {
+  width: 200px;
+}
+
