@@ -4,6 +4,8 @@
   padding: 0;
 }
 
+
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -30,4 +32,48 @@ button:focus-visible {
 
 input {
   padding: 7px;
+}
+
+
+.card-enter {
+  transform: translateX(-350px);
+}
+
+.card-enter-active {
+  transform: translateX(0px);
+  transition: all 500ms ease-in;
+}
+
+.card-exit {
+  opacity: 1;
+}
+
+.card-exit-active {
+  transform: translateX(-350px);
+  transition: all 500ms ease-in;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+  border: 3px solid green;
+  border-bottom: 5px solid red;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }

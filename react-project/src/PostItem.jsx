@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from "./PostItem.module.css"
 import DeleteBtn from "./DeleteBtn.jsx"
+import { TransitionGroup } from 'react-transition-group'
 
 export default function PostItem({post, index, deletePost}) {
     return (

@@ -1,11 +1,18 @@
 import React from 'react'
 import styles from "./PostList.module.css"
 import PostItem from "./PostItem.jsx"
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import "./index.css"
 
 export default function PostList({postArr, deletePost}) {
     return (
-        <div className={styles.posts}>
-            {postArr.map((elem, index) => <PostItem deletePost={deletePost} key={elem.id} index={index} post={elem}/>) }
-        </div>
+        <TransitionGroup className={styles.postList}>
+            {postArr.map((elem, index) => (
+                <CSSTransition key={elem.id} timeout={500} classNames='card'>
+                    <PostItem deletePost={deletePost}  index={index} post={elem}/>
+                </CSSTransition>
+            )) }
+        </TransitionGroup>
+
     )
 }
