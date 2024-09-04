@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: white;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #1a1a1a;
+  border: 1px solid black;
+}
+button:hover {
+  transition: 0.7s;
+  color: white;
+  background-color: rgb(66, 66, 66);
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+  padding: 7px;
+}
+
+
+.card-enter {
+  transform: translateX(-350px);
+}
+
+.card-enter-active {
+  transform: translateX(0px);
+  transition: all 500ms ease-in;
+}
+
+.card-exit {
+  opacity: 1;
+}
+
+.card-exit-active {
+  transform: translateX(-350px);
+  transition: all 500ms ease-in;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rotate 1s infinite linear;
+  border: 3px solid green;
+  border-bottom: 5px solid red;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
